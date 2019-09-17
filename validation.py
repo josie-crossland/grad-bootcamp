@@ -20,7 +20,7 @@ def validate_records(data):
             cancer_type = int(record['cancer_type'])
             treatment_type = int(record['treatment_type'])
 
-            is_child_patient = get_is_child_patient(date_of_birth)
+            is_child_patient = get_is_child_patient(date_first_seen, date_of_birth)
 
             is_valid_date_sequence = validate_date_sequence(date_first_seen, date_of_diagnosis,
                                                             treatment_start_date, treatment_end_date)
